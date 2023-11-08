@@ -8,10 +8,10 @@ stages:
   jobs:
   - job: Build
     pool:
-      vmImage: ubuntu-latest
+      vmImage: Default
 
-  variables:
-    buildConfiguration: 'Release'
+    variables:
+      buildConfiguration: 'Release'
 
     steps:
     - task: UseDotNet@2
