@@ -7,7 +7,8 @@ stages:
 
   jobs:
   - job: Build
-    pool:
+    pool: 
+      name: Default
       vmImage: ubuntu-latest
 
     variables:
