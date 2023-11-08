@@ -10,8 +10,8 @@ stages:
     pool:
       vmImage: ubuntu-latest
 
-  variables:
-    buildConfiguration: 'Release'
+    variables:
+      buildConfiguration: 'Release'
 
     steps:
     - task: UseDotNet@2
@@ -47,3 +47,4 @@ stages:
         command: 'build'
         arguments: '--no-restore --configuration Release'
         projects: '**/*.csproj'
+        
