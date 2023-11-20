@@ -1,6 +1,12 @@
 trigger:
-  - '*'
+- '*'
+
+stages:
+- stage: Build
+  displayName: My Build
   
+  jobs:
+  - job: Build
   pool:
     vmImage: 'ubuntu-20.04'
     demands:
@@ -57,4 +63,3 @@ trigger:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     condition: succeeded()
-    
